@@ -4,6 +4,7 @@
 
 <div class="card-body">
     <h5 class="card-title">Users</h5>
+    <?php echo $__env->make('components.flash-message', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <table class="table table-bordered table-hover" id="tableUsers">
         <thead>
             <tr>

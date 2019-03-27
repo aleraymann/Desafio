@@ -35,16 +35,9 @@ class ProductController extends Controller
      */
     public function store(StoreProductsRequest $request)
     { 
-        $path = $request->file('image')->store('images', 'public');
-
-        $product = new Product();
-        $product->title = $request->input('title');
-        $product->description = $request->input('description');
-        $product->price = $request->input('price');
-        $product->image = $path;
-        $product->save();
-
-        return redirect('/products');
+        $path = $request->file('image')->store('images', 'public');   
+        $items = Product::create($request->all());
+        return redirect('/products')->with('success','{$product->title} - was created successfully!');
     }
 
     /**
@@ -90,7 +83,7 @@ class ProductController extends Controller
             $product->image = $path;
             $product->save();
         }
-        return redirect('/products');
+        return redirect('/products')->with('warning', "{$product->title} - was Modified");
     }
 
     /**
@@ -106,7 +99,7 @@ class ProductController extends Controller
             $image = $product->image;
             Storage::disk('public')->delete($image);
             $product->delete();
-            return redirect('/products');
+            return redirect('/products')->with('success', "{$product->title} - was Deleted");
         }
         return response("Product not found", 404);
     } 

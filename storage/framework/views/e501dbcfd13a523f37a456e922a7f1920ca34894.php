@@ -18,6 +18,7 @@
             <p><a href="/newProduct" class="btn btn-primary">
                     <img class="img-fluid" src="/img/addprod.png">
                     New Product</a></p>
+                    <?php echo $__env->make('components.flash-message', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             <h3>Product's List</h3>
             <div class="row">
                 <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

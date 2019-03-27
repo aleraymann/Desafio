@@ -33,7 +33,7 @@
 <script type="text/javascript">
 $(document).ready(function($) {
     var $price = $("#price");
-    $price.mask('#.###,##');
+    $price.mask('####.##', {reverse: true});
 });
 </script>
 @endsection

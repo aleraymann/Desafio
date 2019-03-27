@@ -17,6 +17,7 @@
             <p><a href="/newProduct" class="btn btn-primary">
                     <img class="img-fluid" src="/img/addprod.png">
                     New Product</a></p>
+                    @include('components.flash-message')
             <h3>Product's List</h3>
             <div class="row">
                 @foreach($products as $i)

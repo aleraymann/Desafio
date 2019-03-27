@@ -3,6 +3,7 @@
 
 <div class="card-body">
     <h5 class="card-title">Users</h5>
+    @include('components.flash-message')
     <table class="table table-bordered table-hover" id="tableUsers">
         <thead>
             <tr>
