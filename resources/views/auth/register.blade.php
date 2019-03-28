@@ -61,7 +61,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
+                            <label for="postalcode"
+                                class="col-md-4 col-form-label text-md-right">{{ __('Postal Code') }}</label>
+                            <div class="col-md-6">
+                                <input id="postalcode" type="text" class="form-control" name="postalcode"
+                                    value="{{ old('postalcode') }}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
                             <div class="col-md-6">
                                 <input id="city" type="text" class="form-control" name="city" value="{{ old('city') }}">
                             </div>
@@ -71,14 +79,6 @@
                             <div class="col-md-6">
                                 <input id="state" type="text" class="form-control" name="state"
                                     value="{{ old('state') }}">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="postalcode"
-                                class="col-md-4 col-form-label text-md-right">{{ __('Postal Code') }}</label>
-                            <div class="col-md-6">
-                                <input id="postalcode" type="text" class="form-control" name="postalcode"
-                                    value="{{ old('postalcode') }}">
                             </div>
                         </div>
                         <div class="form-group row">

@@ -28,7 +28,7 @@ class ProductServices
                 'success' => true,
                 'message' => "Execution OK",
                 'data'=>$product,
-            ]
+            ];
 
         }
         catch(\Exception $esception)
@@ -36,7 +36,7 @@ class ProductServices
             return[
                 'success' => false,
                 'message' => "Execution Error",
-            ]
+            ];
         }
     }
     public function update(){}

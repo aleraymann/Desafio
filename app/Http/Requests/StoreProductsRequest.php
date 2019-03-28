@@ -24,7 +24,7 @@ class StoreProductsRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=> 'required|string|alpha_num|min:2|max:20',
+            'title'=> 'required|string|min:2|max:20',
             'price'=> 'required|numeric|min:0|max:9999999',
             'description'=> 'required|min:5|max:50',
             'image'=> 'required|image',

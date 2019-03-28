@@ -37,7 +37,7 @@ class ProductController extends Controller
     { 
         $path = $request->file('image')->store('images', 'public');   
         $items = Product::create($request->all());
-        return redirect('/products')->with('success','{$product->title} - was created successfully!');
+        return redirect('/products')->with('success', "Product Create");
     }
 
     /**

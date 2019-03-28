@@ -12,9 +12,9 @@
     <title>Products</title>
 </head>
 
-<body class="newprod">
-    <main role="main">
-        <section class="jumbotron text-center">
+<body class="newprod" id="grad1">
+    <main role="main" class="container">
+        <section class="container text-center">
             <div class="container">
                 <h3>New Product</h3>
                 @include('components.errorsRequired')

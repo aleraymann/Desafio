@@ -13,9 +13,9 @@
     <title>Products</title>
 </head>
 
-<body class="newprod">
-    <main role="main">
-        <section class="jumbotron text-center">
+<body class="newprod" id="grad1">
+    <main role="main" class="container">
+        <section class="container text-center">
             <div class="container">
                 <h3>New Product</h3>
                 <?php echo $__env->make('components.errorsRequired', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

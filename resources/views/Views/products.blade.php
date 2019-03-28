@@ -12,9 +12,9 @@
     <title>Products</title>
 
 <body>
-    <div class="album py-5 bg-light">
+    <div class="album py-5 bg-light container" id="grad1"> 
         <div class="container text-center">
-            <p><a href="/newProduct" class="btn btn-primary">
+            <p><a href="/newProduct" class="btn btn-outline-primary">
                     <img class="img-fluid" src="/img/addprod.png">
                     New Product</a></p>
                     @include('components.flash-message')
@@ -22,8 +22,8 @@
             <div class="row">
                 @foreach($products as $i)
                 <div class="col-md-3">
-                    <div class="card mb-3 shadow-sm">
-                        <img class="card-img-top figure-img img-fluid rounded" src="/storage/{{$i->image}}">
+                    <div class="card mb-3 shadow-sm" id="productCard">
+                        <img class="card-img-top figure-img img-fluid rounded" src="(Storage::url({{$i->image}}))">
                         <div class="card-body">
                             <h5 class="card-text"><strong>Title: </strong> {{$i->title}}</h5>
                             <h6 class="card-text">
@@ -56,14 +56,6 @@
         </div>
     </div>
     </main>
-    <footer class="text-muted">
-        <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
-            <p>©2019 @aleraymann</p>
-        </div>
-    </footer>
 </body>
 
 </html>

@@ -62,6 +62,7 @@ main,
 nav,
 section {
   display: block;
+  
 }
 
 body {
@@ -8395,6 +8396,7 @@ button.bg-dark:focus {
 .pt-4,
 .py-4 {
   padding-top: 1.5rem !important;
+  
 }
 
 .pr-4,
@@ -10728,6 +10730,7 @@ footer p { margin-bottom: .15rem; }
 }
 .card-img-top:hover
 {
+  border-radius: 4px;
         -webkit-transform: scale(1.2);
         -ms-transform: scale(3.2);
         transform: scale(3.2);
@@ -10738,4 +10741,14 @@ li.nav-item.dropdown{
   margin-left: 80%;
 }
 
+#grad1 {
+  background-image: linear-gradient(45deg, white,lightgrey, lightblue);
+}
 
+#productCard{
+  border-radius: 10px;
+  background-color: #eceef1;
+}
+#grad2{
+  background-image: linear-gradient(white,lightgrey);
+}

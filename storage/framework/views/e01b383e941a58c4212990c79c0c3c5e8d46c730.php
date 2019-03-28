@@ -19,7 +19,7 @@
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
 </head>
 
-<body>
+<body id="grad1">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fluid">
             <div class="container">
@@ -88,6 +88,14 @@
 
     </main>
     </div>
+    <footer class="text-muted" id="grad1">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>©2019 @aleraymann</p>
+        </div>
+    </footer>
     <script src="<?php echo e(asset('js/app.js')); ?>" defer></script>
     <?php echo $__env->yieldContent('javascript'); ?>
 </body>
