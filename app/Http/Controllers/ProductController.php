@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Storage;
 use App\Product;
 use App\Http\Requests\StoreProductsRequest;
 use Illuminate\Http\Response;
+use App\Repositories\ProductRepository;
 
 class ProductController extends Controller
 {
-   
+
     public function index()
     {
         $products = Product::all();
@@ -33,11 +34,12 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProductsRequest $request)
-    { 
-        $path = $request->file('image')->store('images', 'public');   
-        $items = Product::create($request->all());
-        return redirect('/products')->with('success', "Product Create");
+    public function store(ProductRepository $repository, StoreProductsRequest $request)
+    {
+      $data = $request->all();
+      $data['image'] = $request->file('image')->store('images','public');
+      $product = $repository->create($data);
+      return redirect('/products')->with('success', "Product Create");
     }
 
     /**
@@ -48,6 +50,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+        //
     }
 
     /**
@@ -76,10 +79,8 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         if (isset($product)) {
+            $product = $request->except('image');
             $path = $request->file('image')->store('images', 'public');
-            $product->title = $request->input('title');
-            $product->description = $request->input('description');
-            $product->price = $request->input('price');
             $product->image = $path;
             $product->save();
         }
@@ -102,5 +103,5 @@ class ProductController extends Controller
             return redirect('/products')->with('success', "{$product->title} - was Deleted");
         }
         return response("Product not found", 404);
-    } 
+    }
 }

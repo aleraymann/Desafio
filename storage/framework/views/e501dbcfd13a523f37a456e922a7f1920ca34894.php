@@ -13,18 +13,18 @@
     <title>Products</title>
 
 <body>
-    <div class="album py-5 bg-light container" id="grad1"> 
+    <div class="album py-5 bg-light container" id="grad1">
         <div class="container text-center">
             <p><a href="/newProduct" class="btn btn-outline-primary">
                     <img class="img-fluid" src="/img/addprod.png">
                     New Product</a></p>
-                    <?php echo $__env->make('components.flash-message', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+            <?php echo $__env->make('components.flash-message', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             <h3>Product's List</h3>
             <div class="row">
                 <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-3">
                     <div class="card mb-3 shadow-sm" id="productCard">
-                        <img class="card-img-top figure-img img-fluid rounded" src="(Storage::url(<?php echo e($i->image); ?>))">
+                        <img class="card-img-top figure-img img-fluid rounded" src="/storage/<?php echo e($i->image); ?>">
                         <div class="card-body">
                             <h5 class="card-text"><strong>Title: </strong> <?php echo e($i->title); ?></h5>
                             <h6 class="card-text">

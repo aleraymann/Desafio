@@ -12,18 +12,18 @@
     <title>Products</title>
 
 <body>
-    <div class="album py-5 bg-light container" id="grad1"> 
+    <div class="album py-5 bg-light container" id="grad1">
         <div class="container text-center">
             <p><a href="/newProduct" class="btn btn-outline-primary">
                     <img class="img-fluid" src="/img/addprod.png">
                     New Product</a></p>
-                    @include('components.flash-message')
+            @include('components.flash-message')
             <h3>Product's List</h3>
             <div class="row">
                 @foreach($products as $i)
                 <div class="col-md-3">
                     <div class="card mb-3 shadow-sm" id="productCard">
-                        <img class="card-img-top figure-img img-fluid rounded" src="(Storage::url({{$i->image}}))">
+                        <img class="card-img-top figure-img img-fluid rounded" src="/storage/{{$i->image}}">
                         <div class="card-body">
                             <h5 class="card-text"><strong>Title: </strong> {{$i->title}}</h5>
                             <h6 class="card-text">

@@ -18,7 +18,7 @@
 
 <div class="custom-file">
     <input type="file" class="custom-file-input" id="image" name="image">
-    <label class="custom-file-label" for="arquivo">Click here and choose your image</label>
+    <label class="custom-file-label" for="image">Click here and choose your image</label>
 </div>
 </div>
 <p>

@@ -86,7 +86,7 @@
 
     </main>
     </div>
-    <footer class="text-muted" id="grad1">
+    <footer class="text-muted">
         <div class="container">
             <p class="float-right">
                 <a href="#">Back to top</a>
