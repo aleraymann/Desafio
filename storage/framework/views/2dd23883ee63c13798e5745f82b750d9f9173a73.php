@@ -1,7 +1,7 @@
 <?php /* /home/aleraymann/Documentos/laravel/Desafio2/resources/views/components/editForm.blade.php */ ?>
 <?php echo csrf_field(); ?>
 <div class="form-group text-left">
-    <label for="text">Title</label>
+    <label for="title">Title</label>
     <input type="text" class="form-control" id="title" name="title" value="<?php echo e($product->title); ?>">
 </div>
 <div class="form-group text-left">

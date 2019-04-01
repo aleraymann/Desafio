@@ -75,16 +75,15 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreProductsRequest $request, $id)
+    public function update(ProductRepository $repository, StoreProductsRequest $request, $id)
     {
         $product = Product::find($id);
         if (isset($product)) {
-            $product = $request->except('image');
-            $path = $request->file('image')->store('images', 'public');
-            $product->image = $path;
-            $product->save();
+            $data = $request->all();
+            $data['image'] = $request->file('image')->store('images','public');
+            $product = $repository->update($data);
         }
-        return redirect('/products')->with('warning', "{$product->title} - was Modified");
+        return redirect('/products')->with('warning', "Product Modified");
     }
 
     /**

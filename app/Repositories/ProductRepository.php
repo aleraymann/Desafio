@@ -13,7 +13,13 @@ class ProductRepository
         }
 
         public function create($data)
-	       {
-		         return $this->product->create($data);
-	       }
+	{
+		return $this->product->create($data);
+        }
+               
+        public function update($data)
+       {
+                $this->product->fill($data);
+                return $this->product->save($data);
+       }
 }

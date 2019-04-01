@@ -31,9 +31,10 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js">
     </script>
     <script type="text/javascript">
-    $(document).ready(function($) {
-                var $price = $("#price");
-                $price.mask('#.###,##');
-    </script>
+$(document).ready(function($) {
+    var $price = $("#price");
+    $price.mask('####.##', {reverse: true});
+});
+</script>
     <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

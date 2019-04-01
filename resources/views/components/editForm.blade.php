@@ -1,6 +1,6 @@
 @csrf
 <div class="form-group text-left">
-    <label for="text">Title</label>
+    <label for="title">Title</label>
     <input type="text" class="form-control" id="title" name="title" value="{{$product->title}}">
 </div>
 <div class="form-group text-left">
