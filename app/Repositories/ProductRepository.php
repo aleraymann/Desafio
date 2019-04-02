@@ -17,9 +17,10 @@ class ProductRepository
 		return $this->product->create($data);
         }
                
-        public function update($data)
+        public function update($data,$id)
        {
-                $this->product->fill($data);
-                return $this->product->save($data);
+                
+                $product =  $this->product->find($id);
+                return $product->update($data);
        }
 }

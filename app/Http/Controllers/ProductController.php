@@ -81,7 +81,7 @@ class ProductController extends Controller
         if (isset($product)) {
             $data = $request->all();
             $data['image'] = $request->file('image')->store('images','public');
-            $product = $repository->update($data);
+            $product = $repository->update($data,$id);
         }
         return redirect('/products')->with('warning', "Product Modified");
     }
