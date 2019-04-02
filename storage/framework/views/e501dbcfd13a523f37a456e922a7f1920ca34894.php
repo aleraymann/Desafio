@@ -12,9 +12,8 @@
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <title>Products</title>
 
-<body>
-    <div class="album py-5 bg-light container" id="grad1">
-        <div class="container text-center">
+<body id="grad1">
+        <main class="container text-center" id="app">
             <p><a href="/newProduct" class="btn btn-outline-primary">
                     <img class="img-fluid" src="/img/addprod.png">
                     New Product</a></p>
@@ -42,7 +41,7 @@
                                     <form method="POST" action="/<?php echo e($i->id); ?>">
                                         <?php echo csrf_field(); ?>
                                         <input type="hidden" name="_method" value="delete">
-                                        <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Confirma Exclusão do Registro?')">Delete</button>
                                     </form>
                                     <form method="POST" action="/products/edit/<?php echo e($i->id); ?>">
                                         <?php echo csrf_field(); ?>
@@ -56,9 +55,7 @@
                 </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
-        </div>
-    </div>
-    </main>
+     </main>       
 </body>
 
 </html>

@@ -20,67 +20,59 @@
 </head>
 
 <body id="grad1">
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fluid">
-            <div class="container">
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    <?php if(auth()->guard()->guest()): ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
-                    </li>
-                    <?php if(Route::has('register')): ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
-                    </li>
-                    <?php endif; ?>
-                    <?php else: ?>
-                    <img src="/img/pp.png">
-                </ul>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/home"> Home</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/user">Users</a>
-                        </li>
-                        <ul class="navbar-nav dropdown mr-auto">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Products
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?php echo e(url('/newProduct')); ?>">New Product</a>
-                                <a class="dropdown-item" href="<?php echo e(url('/products')); ?>">View Products</a>
-                            </div>
-                        </ul>
-                    </ul>
-                    <ul class="navbar-nav collapse navbar-collapse" id="userLogin">
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                    <?php echo e(__('Logout')); ?>
-
-                                </a>
-                                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST"
-                                    style="display: none;">
-                                    <?php echo csrf_field(); ?>
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="http://www.letsgrow.com.br" target="blank"><img src="/img/pp.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <?php if(auth()->guard()->guest()): ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
+                </li>
+                <?php if(Route::has('register')): ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
+                </li>
                 <?php endif; ?>
-            </div>
-    </div>
+                <?php else: ?>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i><u>
+                        <?php echo e(Auth::user()->name); ?> </i></u><span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            <?php echo e(__('Logout')); ?>
+
+                        </a>
+                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                            <?php echo csrf_field(); ?>
+                        </form>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/user"><b>Users</b></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="navbarDropdown" data-toggle="dropdown"><b>Products</b></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="nav-item dropdown-item" href="<?php echo e(url('/products')); ?>">Product List</a>
+                        <a class="nav-item dropdown-item" href="<?php echo e(url('/newProduct')); ?>">New Product</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+        <?php endif; ?>
+        </div>
     </nav>
 
     <main class="py-4">

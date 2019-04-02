@@ -2,7 +2,7 @@
 <?php $__env->startSection('content'); ?>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6 fluid">
             <div class="card">
                 <div class="card-header  text-center">
                     <h1><b><i>Welcome</b></i></h1>
@@ -14,8 +14,22 @@
 
                     </div>
                     <?php endif; ?>
-                    <div class="text-center">
-                        <img class="img-fluid" src="/img/pp1.png">
+                    <div class="text-center fluid">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <img class="img-fluid" src="/img/pp.jpg">
+                                </div>
+                                <div class="flip-box-back">
+                                    <br>
+                                    <h2><b><i>Let's Grow</b></i></h2>
+                                    <p><b><a href="http://www.letsgrow.com.br" target="blank">Let's Grow</a> passionate about
+                                            what she does, and why she does it with excellence, with affection and
+                                            competence.</b></p>
+                                    <p><b>All this passion makes it different in the market.</b></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <br>
                     <div class="container">

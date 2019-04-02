@@ -17,6 +17,7 @@
                 <th>Number</th>
                 <th>Complement</th>
                 <th>District</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +34,7 @@
                 <td>{{$i->complement}}</td>
                 <td>{{$i->district}}</td>
                 <td>
-                    <a href='/user/delete/{{$i->id}}'><img src="/img/delete.png"></a>
+                    <a href='/user/delete/{{$i->id}}' onclick="return confirm('Confirma Exclusão do Registro?')"><img src="/img/delete.png"></a>
                 </td>
             </tr>
             @endforeach

@@ -11,9 +11,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>Products</title>
 
-<body>
-    <div class="album py-5 bg-light container" id="grad1">
-        <div class="container text-center">
+<body id="grad1">
+        <main class="container text-center" id="app">
             <p><a href="/newProduct" class="btn btn-outline-primary">
                     <img class="img-fluid" src="/img/addprod.png">
                     New Product</a></p>
@@ -39,7 +38,7 @@
                                     <form method="POST" action="/{{$i->id}}">
                                         @csrf
                                         <input type="hidden" name="_method" value="delete">
-                                        <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Confirma Exclusão do Registro?')">Delete</button>
                                     </form>
                                     <form method="POST" action="/products/edit/{{$i->id}}">
                                         @csrf
@@ -53,9 +52,7 @@
                 </div>
                 @endforeach
             </div>
-        </div>
-    </div>
-    </main>
+     </main>       
 </body>
 
 </html>

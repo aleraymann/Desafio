@@ -18,6 +18,7 @@
                 <th>Number</th>
                 <th>Complement</th>
                 <th>District</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -34,7 +35,7 @@
                 <td><?php echo e($i->complement); ?></td>
                 <td><?php echo e($i->district); ?></td>
                 <td>
-                    <a href='/user/delete/<?php echo e($i->id); ?>'><img src="/img/delete.png"></a>
+                    <a href='/user/delete/<?php echo e($i->id); ?>' onclick="return confirm('Confirma Exclusão do Registro?')"><img src="/img/delete.png"></a>
                 </td>
             </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
