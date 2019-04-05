@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
 
-<div class="card-body">
+<div class="card-body"id="app">
     <h5 class="card-title">Registered Users</h5>
     <?php echo $__env->make('components.flash-message', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <table class="table table-bordered table-hover" id="tableUsers">

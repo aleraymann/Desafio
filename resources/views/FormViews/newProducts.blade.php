@@ -13,9 +13,9 @@
 </head>
 
 <body class="newprod" id="grad1">
-    <main role="main" class="container">
+    <main class="py-4" id="app">
         <section class="container text-center">
-            <div class="container">
+            <div class="container fluid">
                 <h3>New Product</h3>
                 @include('components.errorsRequired')
                 <form method="POST" action="{{ route('products.store') }} " enctype="multipart/form-data">

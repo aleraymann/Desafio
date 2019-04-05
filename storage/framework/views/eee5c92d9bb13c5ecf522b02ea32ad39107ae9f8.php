@@ -1,6 +1,6 @@
 <?php /* /home/aleraymann/Documentos/laravel/Desafio2/resources/views/Views/home.blade.php */ ?>
 <?php $__env->startSection('content'); ?>
-<div class="container">
+<div class="container" id="app">
     <div class="row justify-content-center">
         <div class="col-md-6 fluid">
             <div class="card">

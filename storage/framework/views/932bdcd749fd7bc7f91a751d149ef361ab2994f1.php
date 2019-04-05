@@ -14,9 +14,9 @@
 </head>
 
 <body class="newprod" id="grad1">
-    <main role="main" class="container">
+    <main class="py-4" id="app">
         <section class="container text-center">
-            <div class="container">
+            <div class="container fluid">
                 <h3>New Product</h3>
                 <?php echo $__env->make('components.errorsRequired', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 <form method="POST" action="<?php echo e(route('products.store')); ?> " enctype="multipart/form-data">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="card-body">
+<div class="card-body"id="app">
     <h5 class="card-title">Registered Users</h5>
     @include('components.flash-message')
     <table class="table table-bordered table-hover" id="tableUsers">

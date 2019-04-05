@@ -710,8 +710,8 @@ pre code {
 .col-1 {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .col {
@@ -3183,6 +3183,7 @@ fieldset:disabled a.btn {
 .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.7875rem;
+  margin-left: 15px;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -3449,7 +3450,7 @@ input[type=button].btn-block {
 .dropdown-item:focus {
   color: #16181b;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: #afc3d8;
 }
 
 .dropdown-item.active,
@@ -3484,6 +3485,7 @@ input[type=button].btn-block {
   padding: 0.25rem 1.5rem;
   color: #212529;
 }
+
 
 .btn-group,
 .btn-group-vertical {
@@ -4270,6 +4272,9 @@ input[type=button].btn-block {
   color: #6c757d;
   pointer-events: none;
   cursor: default;
+}
+b:hover{
+  color: lightsteelblue;
 }
 
 .nav-tabs {
@@ -10713,8 +10718,8 @@ body #newprod { padding: 5px; }
 .jumbotron .container { max-width: 40rem; }
 .btn-card { margin: 4px; }
 .btn { margin-right: 5px; }
-footer { padding-top: 3rem; padding-bottom: 3rem; }
-footer p { margin-bottom: .15rem; }
+footer { padding-top: 2px; padding-bottom: 2px; }
+footer p { margin-bottom: 2px; }
 
 .card-img-top{
   height: 80px;
@@ -10786,4 +10791,30 @@ li.nav-item.dropdown{
   background-color: rgb(234, 240, 247);
   color: black;
   transform: rotateY(180deg);
+}
+/* Modal Content */
+.modal-content {
+  background-color: #d8e5e7;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  height:80%;
+}
+.close {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+iframe{
+  padding: 20px;
 }
