@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('Views/products', compact(['products']));
+        return view('products/products', compact(['products']));
     }
 
     /**
@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('FormViews/newProducts');
+        return view('products/new-products');
     }
 
     /**
@@ -63,7 +63,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         if (isset($product)) {
-            return view('FormViews/editProducts', compact('product'));
+            return view('products/edit-products', compact('product'));
         }
         return redirect('/products');
     }

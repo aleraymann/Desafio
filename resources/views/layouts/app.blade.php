@@ -70,33 +70,33 @@
                     </div>
                 </li>
             </ul>
-            <!-- Trigger/Open The Modal -->
             <button class="btn btn-outline-primary " id="myBtn">Find Us</button>
-            <!-- The Modal -->
             <div id="myModal" class="modal">
-                <!-- Modal content -->
                 <div class="modal-content">
-                    <h4>Let's Grow Sistemas Inteligentes</h5>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.3860350258446!2d-51.467073885534816!3d-25.39188558380598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ef36304a759317%3A0x9445763b5bcfef16!2sR.+XV+de+Novembro%2C+7286+-+Centro%2C+Guarapuava+-+PR%2C+85010-000!5e0!3m2!1spt-BR!2sbr!4v1554488185621!5m2!1spt-BR!2sbr" 
-                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div> 
-                    <ul>
-                    <li><h5>Rua XV de novembro, 7286 - 2º andar, sala 5;</h5></li>
-                    <li><h5>Funcionamento: Seg a Sex das 9:00 AM às 18:00 PM;</h5></li>
-                    <li><h5>Telefones: TIM:42 9.9973-8042 / VIVO:42 9.9142-7446;</h5></li>
-                    </ul>  
-                    <span class="close text-right"> &times;</span>    
+                    <h4>Let's - Sistemas Inteligentes</h5>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.3860350258446!2d-51.467073885534816!3d-25.39188558380598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ef36304a759317%3A0x9445763b5bcfef16!2sR.+XV+de+Novembro%2C+7286+-+Centro%2C+Guarapuava+-+PR%2C+85010-000!5e0!3m2!1spt-BR!2sbr!4v1554488185621!5m2!1spt-BR!2sbr"
+                                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <ul>
+                            <li>
+                                <h5>Street XV de novembro, 7286 - 2º floor, room 5;</h5>
+                            </li>
+                            <li>
+                                <h5>Work at: Mon - Fri das 9:00 AM - 18:00 PM;</h5>
+                            </li>
+                            <li>
+                                <h5> Phones: TIM:42 9.9973-8042 / VIVO:42 9.9142-7446;</h5>
+                            </li>
+                        </ul>
+                        <span class="close text-right"> &times;</span>
                 </div>
-
             </div>
-
         </div>
         @endguest
         </div>
     </nav>
-
     <main class="py-4">
         @yield('content')
     </main>
@@ -119,26 +119,17 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('javascript')
     <script>
-    // Get the modal
     var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
     btn.onclick = function() {
         modal.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";

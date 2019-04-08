@@ -1,4 +1,4 @@
-<?php /* /home/aleraymann/Documentos/laravel/Desafio2/resources/views/Views/home.blade.php */ ?>
+<?php /* /home/aleraymann/Documentos/laravel/Desafio2/resources/views/home.blade.php */ ?>
 <?php $__env->startSection('content'); ?>
 <div class="container" id="app">
     <div class="row justify-content-center">

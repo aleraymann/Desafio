@@ -1,5 +1,6 @@
-<?php /* /home/aleraymann/Documentos/laravel/Desafio2/resources/views/Views/home.blade.php */ ?>
-<?php $__env->startSection('content'); ?>
+@extends('layouts.app')
+
+@section('content')
 <div class="container" id="app">
     <div class="row justify-content-center">
         <div class="col-md-6 fluid">
@@ -8,12 +9,11 @@
                     <h1><b><i>Welcome</b></i></h1>
                 </div>
                 <div class="card-body" id="grad2">
-                    <?php if(session('status')): ?>
+                    @if (session('status'))
                     <div class="alert alert-success" role="alert">
-                        <?php echo e(session('status')); ?>
-
+                        {{ session('status') }}
                     </div>
-                    <?php endif; ?>
+                    @endif
                     <div class="text-center fluid">
                         <div class="flip-box">
                             <div class="flip-box-inner">
@@ -48,5 +48,4 @@
             </div>
             <img id="slide" src="/img/toasty.png">
         </div>
-        <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        @endsection

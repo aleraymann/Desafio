@@ -11,8 +11,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('Views/users', compact('users'));
-    
+        return view('users/users', compact('users'));
     }
 
     /**
@@ -22,8 +21,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        
-        
+        //
     }
 
     /**
@@ -34,7 +32,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-       
+        //
     }
 
     /**
@@ -48,7 +46,7 @@ class UserController extends Controller
         $users = User::find($id);
         if (isset($users)) {
             return json_encode($users);
-    }
+        }
     }
 
     /**
@@ -71,6 +69,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //
     }
 
     /**
