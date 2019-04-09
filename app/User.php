@@ -45,4 +45,27 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function search(Array $data)
+    {
+        //dd($data['name']);
+        $users =  $this->where(function($querry) use ($data){
+            if(isset($data['id']))
+                $querry->where('id', $data['id']);
+
+            if(isset($data['name']))
+                $querry->where('name', $data['name']);
+
+            if(isset($data['city']))
+                $querry->where('city', $data['city']);
+
+            if(isset($data['state']))
+                $querry->where('state', $data['state']);
+
+            if(isset($data['district']))
+                $querry->where('district', $data['district']);
+        });//->toSql();
+        return $users->get();
+
+    }
 }

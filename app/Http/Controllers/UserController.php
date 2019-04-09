@@ -87,4 +87,11 @@ class UserController extends Controller
         }
         return response('<h1>User not found</h1>');
     } 
+
+    public function search(Request $request, User $user){
+        $dataForm = $request->all();
+        $users = $user->search($dataForm);
+        //dd($users);
+        return view('users/users', compact('users'));
+    }
 }

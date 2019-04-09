@@ -17,11 +17,17 @@
         <p><a href="/newProduct" class="btn btn-outline-primary">
                 <img class="img-fluid" src="/img/addprod.png">
                 New Product</a></p>
-        <h3>Product's List</h3>
+    </div>
+    <div class="container">
+        <h5>Search Products:
+            <form action="/products" method="POST" class="form form-inline">
+                <?php echo csrf_field(); ?>
+                <input type="text" name="title" class="form-control" placeholder="Title">
+
+                <button type="submit" class="btn btn-primary">Search</button>
     </div>
     <main class="py-4" id="app">
         <?php echo $__env->make('components.flash-message', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-
         <div class="row container text-center fluid">
             <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-md-3">

@@ -103,4 +103,10 @@ class ProductController extends Controller
         }
         return response("Product not found", 404);
     }
+
+    public function search(Request $request, Product $product){
+        $dataForm = $request->all();
+        $products = $product->search($dataForm);
+        return view('products/products', compact(['products']));
+    }
 }

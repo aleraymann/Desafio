@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('products', 'ProductController');
+Route::post('/products', 'ProductController@search');
 Route::get('/newProduct', 'ProductController@create');
 Route::post('/newProduct', 'ProductController@store')->name('products.store');
 Route::get('/products/edit/{id}', 'ProductController@edit');
@@ -27,6 +28,7 @@ Route::post('/products/{id}', 'ProductController@update');
 Route::delete('/{id}', 'ProductController@destroy');
 
 Route::get('/user', 'UserController@index');
+Route::post('/user', 'UserController@search');
 Route::get('/user/delete/{id}', 'UserController@destroy');
 
 

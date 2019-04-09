@@ -16,11 +16,17 @@
         <p><a href="/newProduct" class="btn btn-outline-primary">
                 <img class="img-fluid" src="/img/addprod.png">
                 New Product</a></p>
-        <h3>Product's List</h3>
+    </div>
+    <div class="container">
+        <h5>Search Products:
+            <form action="/products" method="POST" class="form form-inline">
+                @csrf
+                <input type="text" name="title" class="form-control" placeholder="Title">
+
+                <button type="submit" class="btn btn-primary">Search</button>
     </div>
     <main class="py-4" id="app">
         @include('components.flash-message')
-
         <div class="row container text-center fluid">
             @foreach($products as $i)
             <div class="col-md-3">
