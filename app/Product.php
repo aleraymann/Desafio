@@ -17,7 +17,7 @@ class Product extends Model
     {
         $products =  $this->where(function($querry) use ($data){
             if(isset($data['title']))
-                $querry->where('title', $data['title']);
+                $querry->where('title','like', '%'.$data['title'].'%');
         });
         return $products->get();
 

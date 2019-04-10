@@ -54,16 +54,16 @@ class User extends Authenticatable
                 $querry->where('id', $data['id']);
 
             if(isset($data['name']))
-                $querry->where('name', $data['name']);
+                $querry->where('name','like', '%'.$data['name'].'%');
 
             if(isset($data['city']))
-                $querry->where('city', $data['city']);
+                $querry->where('city','like', '%'.$data['city'].'%');
 
             if(isset($data['state']))
-                $querry->where('state', $data['state']);
+                $querry->where('state', 'like', '%'.$data['state'].'%');
 
             if(isset($data['district']))
-                $querry->where('district', $data['district']);
+                $querry->where('district', 'like', '%'.$data['district'].'%');
         });//->toSql();
         return $users->get();
 
