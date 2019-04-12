@@ -4,6 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+            <?php echo $__env->make('components.errorsRequired', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 <div class="card-header"><img src="/img/pp.png"><?php echo e(__('Register')); ?></div>
                 <div class="card-body">
                     <form method="POST" action="<?php echo e(route('register')); ?>">
@@ -118,6 +119,7 @@
                                     <?php echo e(__('Register')); ?>
 
                                 </button>
+                                <a class="btn btn-outline-danger" href="/#login-show" role="button"> Back</a>
                             </div>
                         </div>
                     </form>

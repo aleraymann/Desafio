@@ -46,6 +46,7 @@
                     </div>
                 </div>
             </div>
+
             <img id="slide" src="/img/toasty.png">
         </div>
         @endsection

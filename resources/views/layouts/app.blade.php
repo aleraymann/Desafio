@@ -19,7 +19,7 @@
 
 <body id="grad1">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="http://www.letsgrow.com.br" target="blank"><img src="/img/pp.png"></a>
+        <a class="navbar-brand"><img src="/img/pp.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,13 +27,9 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
+
                 @if (Route::has('register'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                </li>
+
                 @endif
                 @else
                 <li class="nav-item dropdown">
@@ -105,13 +101,12 @@
             <p class="float-right">
                 <a href="#"><img src="/img/up.png"> Back to top</a>
             </p>
-            <p>Dev: @aleraymann ©2019</p>
-            <p>
-                <p>Send me an email: <a href="mailto:aleraymann@gmail.com" target="blank"><img src="/img/gmail.png"></a>
-                    or visit <a href="https://www.facebook.com/alessandro.raymann" target="blank"><img
-                            src="/img/face.png"></a>
-                    / <a href="https://www.instagram.com/aleraymann/" target="blank"><img src="/img/insta.png"></a>
-                </p>
+            <p> Send me an email: <a href="mailto:aleraymann@gmail.com" target="blank"><img src="/img/gmail.png"></a>
+                or visit <a href="https://www.facebook.com/alessandro.raymann" target="blank"><img
+                        src="/img/face.png"></a>
+                / <a href="https://www.instagram.com/aleraymann/" target="blank"><img src="/img/insta.png"></a>
+                @aleraymann ©2019
+            </p>
             </p>
         </div>
     </footer>
@@ -121,11 +116,11 @@
     var modal = document.getElementById('myModal');
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
+    btn.onclick = function(block) {
         modal.style.display = "block";
     }
 
-    span.onclick = function() {
+    span.onclick = function(none) {
         modal.style.display = "none";
     }
 

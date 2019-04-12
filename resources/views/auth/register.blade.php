@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+            @include('components.errorsRequired')
                 <div class="card-header"><img src="/img/pp.png">{{ __('Register') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -118,6 +119,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <a class="btn btn-outline-danger" href="/#login-show" role="button"> Back</a>
                             </div>
                         </div>
                     </form>
