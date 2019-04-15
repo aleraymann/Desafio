@@ -4771,9 +4771,7 @@ b:hover{
 .card-body {
   flex: 1 1 auto;
   padding: 1rem;
-  border-radius: 20px;
 }
-
 .card-title {
   margin-bottom: 0.75rem;
 }
@@ -10740,11 +10738,6 @@ li.nav-item.dropdown{
   display: block;
 }
 
-
-#grad1 {
-  background-image: linear-gradient(45deg, white,lightgrey, lightblue);
-}
-
 #productCard{
   border-radius: 10px;
   background-color: #eceef1;
@@ -10783,7 +10776,7 @@ li.nav-item.dropdown{
 
 /* Style the front side (fallback if image is missing) */
 .flip-box-front {
-  background-color: #bbb;
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
@@ -10819,21 +10812,21 @@ li.nav-item.dropdown{
 iframe{
   padding: 20px;
 }
-html{height:100%;}
+html{height:100%;
+}
+
 body{
   height: 100%;
   margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;;
-  background: rgb(34,193,195);
-  background: linear-gradient(130deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background: rgb(201, 236, 236);
+ 
 }
 .login-wrap{
-  position:absolute;
-  left:50%;
-  margin-left:-33px;
-  top:50%;
-  margin-top:-30px;
+  position:relative;
+  left:45%;
+
 }
 .login-form{
   position:absolute;
@@ -10849,4 +10842,28 @@ body{
   visibility: visible;
   opacity: 1;
   transition:all 1s ease;
+}
+
+div#homecard.mb-3{
+  width: 25%;
+  float: left;
+}
+#shake {
+  border: rgb(87, 173, 46) dotted;
+  animation: shake 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }

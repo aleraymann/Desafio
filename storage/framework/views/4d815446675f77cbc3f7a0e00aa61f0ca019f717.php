@@ -18,11 +18,11 @@
                 <img class="img-fluid" src="/img/addprod.png">
                 New Product</a></p>
     </div>
-    <div class="container">
-        <h5>Search Products:
+    <div class="row justify-content-center">
+        <br>
             <form action="/products" method="POST" class="form form-inline">
                 <?php echo csrf_field(); ?>
-                <input type="text" name="title" class="form-control" placeholder="Title">
+                <input type="text" name="title" class="form-control" placeholder="Search for Title">
 
                 <button type="submit" class="btn btn-primary">Search</button>
     </div>
@@ -63,7 +63,9 @@
                 </div>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+           
         </div>
+        <?php echo $__env->make('components.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 
 </html>

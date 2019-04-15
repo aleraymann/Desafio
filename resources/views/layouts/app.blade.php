@@ -64,7 +64,11 @@
                             Product</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/about"><img src="/img/about.png"> <b>About Us</b></a>
+                </li>
             </ul>
+            
             <button class="btn btn-outline-primary " id="myBtn">Find Us</button>
             <div id="myModal" class="modal">
                 <div class="modal-content">
@@ -96,20 +100,6 @@
         @yield('content')
     </main>
     </div>
-    <footer class="text-muted">
-        <div class="container">
-            <p class="float-right">
-                <a href="#"><img src="/img/up.png"> Back to top</a>
-            </p>
-            <p> Send me an email: <a href="mailto:aleraymann@gmail.com" target="blank"><img src="/img/gmail.png"></a>
-                or visit <a href="https://www.facebook.com/alessandro.raymann" target="blank"><img
-                        src="/img/face.png"></a>
-                / <a href="https://www.instagram.com/aleraymann/" target="blank"><img src="/img/insta.png"></a>
-                @aleraymann ©2019
-            </p>
-            </p>
-        </div>
-    </footer>
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('javascript')
     <script>

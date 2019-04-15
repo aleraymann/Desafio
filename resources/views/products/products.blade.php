@@ -17,11 +17,11 @@
                 <img class="img-fluid" src="/img/addprod.png">
                 New Product</a></p>
     </div>
-    <div class="container">
-        <h5>Search Products:
+    <div class="row justify-content-center">
+        <br>
             <form action="/products" method="POST" class="form form-inline">
                 @csrf
-                <input type="text" name="title" class="form-control" placeholder="Title">
+                <input type="text" name="title" class="form-control" placeholder="Search for Title">
 
                 <button type="submit" class="btn btn-primary">Search</button>
     </div>
@@ -60,7 +60,9 @@
                 </div>
             </div>
             @endforeach
+           
         </div>
+        @include('components.footer')
 </body>
 
 </html>

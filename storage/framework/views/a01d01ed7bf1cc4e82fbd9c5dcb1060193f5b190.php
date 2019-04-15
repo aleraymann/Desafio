@@ -3,10 +3,10 @@
 <?php $__env->startSection('content'); ?>
 
 <div class="card-body" id="app">
-    <div>
-    <h5>Search Users:
+    <div class="row justify-content-center">
         <form action="/user" method="POST" class="form form-inline">
         <?php echo csrf_field(); ?>
+        <h5> Find user: <h5>
             <input type="text" name="id" class="form-control" placeholder="ID">
             <input type="text" name="name" class="form-control" placeholder="Name">
             <input type="text" name="city" class="form-control" placeholder="City">
@@ -55,6 +55,7 @@
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>
     </table>
+    <?php echo $__env->make('components.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

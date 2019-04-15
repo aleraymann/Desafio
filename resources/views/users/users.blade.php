@@ -2,10 +2,10 @@
 @section('content')
 
 <div class="card-body" id="app">
-    <div>
-    <h5>Search Users:
+    <div class="row justify-content-center">
         <form action="/user" method="POST" class="form form-inline">
         @csrf
+        <h5> Find user: <h5>
             <input type="text" name="id" class="form-control" placeholder="ID">
             <input type="text" name="name" class="form-control" placeholder="Name">
             <input type="text" name="city" class="form-control" placeholder="City">
@@ -54,5 +54,6 @@
             @endforeach
         </tbody>
     </table>
+    @include('components.footer')
 </div>
 @endsection

@@ -3,10 +3,11 @@
 @section('content')
 <div class="container" id="app">
     <div class="row justify-content-center">
-        <div class="col-md-6 fluid">
+        <div class="col-md-11 fluid">
             <div class="card">
                 <div class="card-header  text-center">
-                    <h1><b><i>Welcome</b></i></h1>
+                    <h1><br><b><i>WELCOME and HAVE FUN</b></i></h1>
+                    <br>
                 </div>
                 <div class="card-body" id="grad2">
                     @if (session('status'))
@@ -22,7 +23,7 @@
                                 </div>
                                 <div class="flip-box-back">
                                     <br>
-                                    <h2><b><i>Let's Grow</b></i></h2>
+                                    <h2><b><i>Let's</b></i></h2>
                                     <p><b><a href="http://www.letsgrow.com.br" target="blank">Let's</a> passionate about
                                             what she does, and why she does it with excellence, with affection and
                                             competence.</b></p>
@@ -33,6 +34,7 @@
                     </div>
                     <br>
                     <div class="container">
+                        <br><br>
                         <div class="row">
                             <div class="col">
                                 <a class=" btn btn-outline-primary col-12" href="/products">
@@ -46,7 +48,8 @@
                     </div>
                 </div>
             </div>
-
             <img id="slide" src="/img/toasty.png">
+            @include('components.footer')
         </div>
+
         @endsection
